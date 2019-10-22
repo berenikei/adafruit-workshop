@@ -1,0 +1,16 @@
+1. use Keyboard extension, and an open excel spreadsheet to log your data
+2. log some data values from sensors (the light level, the temperature, the tilting, etc)
+
+- Trigger the datalogging by button A
+- when logging the data, light up some LEDs to green so you know your device is working
+
+- datalog example:
+keyboard.type("" + control.millis() / 1000 + String.fromCharCode(9))
+  - you write the value from some of the sensor + String.fromCharCode(9) (------> this is equal to the button "Enter"
+  
+  keyboard.functionKey(KeyboardFunctionKey.LeftArrow, KeyboardKeyEvent.Press)
+  - this is to move around the Excel sheet with your arrows
+  - you have to navigate the action back to the beginning of the next line!!
+  
+  link: 
+https://makecode.com/_5K3YJRbeLM0E 
