@@ -1,0 +1,9 @@
+Motion sensing / tilting detector
+
+- in forever loop create if else statements
+- if Y is less than -500, light up the correct LEDs
+- if Y is more than 500, light up the other side
+- same for X
+
+Y is tilting up and down (the battery: less than -500 and the USB port: more than 500)
+X is tilting on the sides
