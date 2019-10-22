@@ -12,5 +12,8 @@ keyboard.type("" + control.millis() / 1000 + String.fromCharCode(9))
   - this is to move around the Excel sheet with your arrows
   - you have to navigate the action back to the beginning of the next line!!
   
+- When you start the logging, you have to have your sheet open and your cursor inside
+- (otherwise it will write wherever your cursor is)
+  
   link: 
 https://makecode.com/_5K3YJRbeLM0E 
