@@ -1,0 +1,25 @@
+Infrared - Treasure Hunt 
+
+1. The treasure 
+
+	- forever loop
+	- wait a few seconds
+	- show something that tells you you send an infra light
+	- send infra light
+
+2. The hunter 
+	
+	- on start / default setting
+	- set a variable for foundTreasure (true/false)
+	- set a variable for the treasureId (the number we will be looking for)
+	- show something that tells you you haven’t found the treasure yet (f.ex. red lights)
+	
+
+	- loop: on receiving an infra id, (this id is a var you name it)
+	- if the received number equals to the treasure number
+	- then show something that tells you found one treasure 
+
+Additional features:
+- add more treasures
+- use the LED lights to show how many did you catch and how many you have left
+- show some animation/sound if you found all of them
