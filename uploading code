@@ -1,0 +1,12 @@
+1. save your code
+2. plug your adafruit
+3. reset by press "reset" button twice (should light up all red and green)
+4. When reset, you should be able to see it in your Finder/My Computer
+5. Drag and drop
+6. it automatically starts the program 
+
+
+Warnings:
+- if you reset your device and put a new code in it, it deletes your previous program
+- if your program will start on switch moved, the switch has to be in inactive position before starting the program,
+  otherwise it won't work and you have to reset
