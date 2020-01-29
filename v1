@@ -1,0 +1,49 @@
+let logit = 0
+input.onSwitchMoved(SwitchDirection.Right, function () {
+    logit = 1
+})
+input.onSwitchMoved(SwitchDirection.Left, function () {
+    logit = 0
+})
+forever(function () {
+    light.clear()
+    while (logit == 1) {
+        light.setPixelColor(0, 0x00ff00)
+        keyboard.type("" + control.millis() / 1000 + String.fromCharCode(9))
+        pause(25)
+        keyboard.type("" + input.acceleration(Dimension.X) + String.fromCharCode(9))
+        pause(25)
+        keyboard.type("" + input.acceleration(Dimension.Y) + String.fromCharCode(9))
+        pause(25)
+        keyboard.type("" + input.acceleration(Dimension.Z) + String.fromCharCode(9))
+        pause(25)
+        keyboard.functionKey(KeyboardFunctionKey.LeftArrow, KeyboardKeyEvent.Press)
+        pause(25)
+        keyboard.functionKey(KeyboardFunctionKey.LeftArrow, KeyboardKeyEvent.Press)
+        pause(25)
+        keyboard.functionKey(KeyboardFunctionKey.LeftArrow, KeyboardKeyEvent.Press)
+        pause(25)
+        keyboard.functionKey(KeyboardFunctionKey.LeftArrow, KeyboardKeyEvent.Press)
+        pause(2000)
+        keyboard.functionKey(KeyboardFunctionKey.DownArrow, KeyboardKeyEvent.Press)
+    }
+})
+forever(function () {
+    if (input.acceleration(Dimension.Y) >= 500) {
+        light.showRing(
+        `red black black black black black black black black red`
+        )
+    } else if (input.acceleration(Dimension.Y) <= -500) {
+        light.showRing(
+        `black black black black red red black black black black`
+        )
+    } else if (input.acceleration(Dimension.X) >= 500) {
+        light.showRing(
+        `black red red red black black black black black black`
+        )
+    } else if (input.acceleration(Dimension.X) <= -500) {
+        light.showRing(
+        `black black black black black black red red red black`
+        )
+    }
+})
